@@ -1,0 +1,1493 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J0e PortFolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Menu with Virtual Keyboard</title>
+ <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+ <script src="script.js" defer></script>
+  </head>
+<style>
+* {
+  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+      /* Your existing CSS styles */
+      /* ... */
+      body {
+        font-family: 
+        
+    margin: 0;
+    padding: 0;
+  
+    overflow: hidden; /* Hides the scrollbar */
+
+
+    background-color: #000;
+    color: #0f0;
+    scroll-behavior:auto;
+
+    height: auto; /* Set a full height for the body */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    
+       
+      }
+
+
+
+.skills-grid-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: #00ff7f;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+/* Wrapper for the skills sections */
+.skills-container {
+  display: grid;
+  margin-left: 25px;
+  margin-right: 25px;
+  align-content: center;
+  grid-template-columns: repeat(2, 1fr); /* Two sections in a row */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr; /* On smaller screens, it will be 1 section per row */
+  }
+}
+
+.skills-section {
+  background-color: #1e1e1e;
+  padding: 20px;
+ 
+
+  
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+}
+
+.skills-section:hover {
+  transform: scale(1);
+}
+
+.title {
+  color: #00ff7f;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills-section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  color: #fff000;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.skills-grid {
+  display: grid;
+    /* Added green border around the grid */
+  grid-template-columns: repeat(3, 1fr);  /* Exactly 2 columns per row */
+  gap: 20px;
+  padding: 10px; /* Optional: padding inside the grid container */
+}
+
+
+.skill-box {
+  background-color: #1e1e1e;
+  border: 2px solid #08fd3d;  /* Green border */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Normal box shadow */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+  background-color: #222;
+  border-color: #3aff3a;  /* Optional: brighter green on hover */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+
+.glitch {
+  position: relative;
+  display: inline-block;
+  font: small-caps bold 15px / 1 sans-serif;
+  color: #00f3df;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.glitch:before,
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00f0f8;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  animation: glitch 1.5s infinite;
+}
+
+.glitch:before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  clip: rect(44px, 450px, 56px, 0);
+}
+
+.glitch:after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  clip: rect(20px, 450px, 56px, 0);
+}
+
+@keyframes glitch {
+  0% {
+    clip: rect(10px, 9999px, 50px, 0);
+  }
+  5% {
+    clip: rect(85px, 9999px, 40px, 0);
+  }
+  10% {
+    clip: rect(10px, 9999px, 20px, 0);
+  }
+  15% {
+    clip: rect(50px, 9999px, 20px, 0);
+  }
+  20% {
+    clip: rect(90px, 9999px, 50px, 0);
+  }
+  25% {
+    clip: rect(5px, 9999px, 35px, 0);
+  }
+  30% {
+    clip: rect(100px, 9999px, 25px, 0);
+  }
+  35% {
+    clip: rect(70px, 9999px, 50px, 0);
+  }
+  40% {
+    clip: rect(60px, 9999px, 45px, 0);
+  }
+  45% {
+    clip: rect(90px, 9999px, 40px, 0);
+  }
+  50% {
+    clip: rect(10px, 9999px, 50px, 0);
+  }
+}      /* Add font-family for h2 */
+      h1 {
+        font: small-caps bold 15px / 1 sans-serif;
+        font-size: 2em;
+        color: #FFFF00;
+        /* Adjust color as needed */
+        text-decoration: underline;
+      }
+
+      h2 {
+        font: small-caps bold 15px / 1 sans-serif;
+        font-size: 2em;
+        text-decoration: underline;
+        color: #FFFF00;
+        /* Adjust color as needed */
+      }
+
+      .p {
+        font: small-caps bold 15px/1 sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .a {
+        font: small-caps bold 15px/1 sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:25px;
+       
+        margin-left: 25px;
+width:95%;
+        padding: 10px;
+ border-radius: 10px;
+        position: fixed;
+        z-index: 1; /* Ensure navbar is above the canvas */
+        color: #0f0;
+        backdrop-filter: blur(20px);
+    background: rgba(43, 255, 1, 0.15);
+    border: 1px solid #ff4314;
+        /* Green text color */
+        box-shadow: 0 0 10px #0f0;
+        /* Green shadow effect */
+        border-bottom: 2px solid #0f0;
+        /* Green border below navbar */
+      }
+
+      .navbar .logo {
+        color: #00f00;
+        /* Text color */
+        font-weight: bold;
+        font: small-caps bold 15px/1 sans-serif;
+        font-size: 2em;
+      }
+
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        /* Adjust the font size as needed */
+        font-weight: bold;
+        color: #000;
+        /* Text color */
+      }
+
+      .logo img {
+        width: 40px;
+        /* Adjust the width as needed */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-right: 10px;
+        /* Space between image and text */
+      }
+
+      .logo span {
+    display: inline-block;
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold;
+    color: #00ff00; /* Neon green */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide text that hasn't been "typed" yet */
+    border-right: 2px solid #00ff00; /* Blinking cursor */
+    width: 7ch; /* Match the number of characters */
+    animation: typing 4s steps(7, end) infinite, blink 0.75s step-end infinite alternate;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 7ch; /* Number of characters */
+    }
+    60% {
+        width: 7ch; /* Pause for a moment at full text */
+    }
+    100% {
+        width: 0; /* Erase the text */
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: #00ff00;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+      .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+       
+        top:70px;
+        right: 20px;
+       
+        border: 1px solid #0f0;
+        /* Green border */
+        border-radius: 5px;
+        width: 200px;
+        gap: 14px;
+        display: none;
+      }
+
+      .navbar .menu a {
+        color: #fff000;
+       
+        /* Green text color */
+       font: small-caps bold 15px/1 sans-serif; 
+        text-decoration: none;
+       margin: 20px 10;
+        display: block;
+       
+        text-align: center;
+        position: relative;
+        /* Position relative for the hover effect */
+        padding: 10px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar .menu a:hover {
+        color: #00cc00;
+      }
+
+      .navbar .menu a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #0f0;
+        /* Green underline */
+        left: 0;
+        bottom: 0;
+        transition: width 0.3s ease;
+      }
+
+      .navbar .menu a:hover::after {
+        width: 100%;
+        /* Expand underline to full width on hover */
+      }
+
+      /* Background glow effect on hover */
+      .navbar .menu a:hover {
+        background: rgba(0, 255, 0, 0.1);
+        /* Subtle green background on hover */
+        box-shadow: 0 0 5px #0f0;
+        /* Green glow effect */
+      }
+
+      .navbar .menu-btn {
+        font-size: 30px;
+        cursor: pointer;
+        color: #0f0;
+        /* Green text color */
+        background: none;
+        border: none;
+        margin-right: 10px;
+      }
+
+      .navbar.active .menu {
+        display: flex;
+      }
+
+      .content {
+        padding: 50px;
+        display: none;
+        scroll-behavior: smooth;
+      }
+
+      .content.active {
+      display: block;
+        scroll-behavior: smooth;
+      }
+
+      .content img {
+        max-width: 300px;
+        height: 250px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #0f0;
+        /* Green glow effect */
+        display: block;
+        margin: 0 auto;
+      }
+
+      .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        scroll-behavior: smooth;
+        padding: 80px;
+margin-top:80px;
+        flex-wrap: wrap;
+        /* Allows wrapping for smaller screens */
+      }
+
+      .home-text {
+        flex: 1;
+        font: small-caps bold 15px/1 sans-serif;
+        margin-right: 20px;
+        min-width: 250px;
+        /* Ensure minimum width for smaller screens */
+      }
+
+      .home-image {
+        flex: 1;
+        
+        max-width: 100%;
+ margin-top: 20px;
+        /* Ensure the image does not exceed its container */
+        min-width: 250px;
+        /* Ensure minimum width for smaller screens */
+      }
+
+      .home-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+        /* Green glow effect */
+        transition: transform 0.3s;
+      }
+
+      .home-image img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .home-content {
+          scroll-behavior: smooth;
+          flex-direction: column;
+
+          /* Stack content and image vertically */
+          align-items: center;
+        }
+
+        .home-text {
+          margin-right: 0;
+          font: small-caps bold 15px/1 sans-serif;
+          text-align: ;
+          /* Center the text for smaller screens */
+        }
+
+        .home-image {
+          margin-top: 20px;
+        }
+      }
+
+      @media (min-width: 600px) {
+        .navbar .menu {
+          scroll-behavior: smooth;
+          display: flex;
+          flex-direction: row;
+          position: static;
+          border: none;
+          font: small-caps bold 15px/1 sans-serif;
+          width: auto;
+        }
+
+        .navbar .menu-btn {
+          display: none;
+        }
+      }
+
+      /* Virtual Keyboard Styles */
+      /* General styles for body */
+      body {
+        background-color: #0f0f0f;
+        /* Dark background */
+        color: #00ff00;
+        /* Green text */
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Keyboard container styles */
+      .keyboard-container {
+        display: flex;
+        margin-top: 12px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      /* Input field styles */
+      #keyboard-input {
+        background-color: #1b1b1b;
+        border: 2px solid #00ff00;
+        color: #00ff00;
+        padding: 10px;
+    
+        font-size: 18px;
+        width: 300px;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+      }
+
+      #keyboard-input::placeholder {
+        color: #0f0;
+        opacity: 0.7;
+      }
+
+      /* Keyboard styles */
+      .keyboard {
+        display: grid;
+        grid-template-: repeat(10, 50px);
+        gap: 1px;
+        margin-top: 20px;
+      }
+
+      .key-row {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      /* Key button styles */
+      .key {
+        border: 2px solid #00ff00;
+        color: #00ff00;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      /* Key button hover effect */
+      .key:hover {
+        background-color: #00ff00;
+        color: #1b1b1b;
+        transform: scale(1.1);
+      }
+
+      /* Key button active effect */
+      .key:active {
+        background-color: #00cc00;
+        color: #1b1b1b;
+      }
+
+      .resume-btn:hover {
+        background: #00cc00;
+        /* Slightly darker green on hover */
+      }
+
+      .about-section {
+        max-width: 900px;
+        margin: 0 auto;
+        margin-top: 10px;
+        background-color: #0f0f0f;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #0f0;
+        /* Green shadow effect */
+        border-bottom: 2px solid #0f0;
+        /* Green border below navbar */
+        border-top: 2px solid #0f0;
+        /* Green border below navbar */
+        border-left: 2px solid #0f0;
+        /* Green border below navbar */
+        border-right: 2px solid #0f0;
+        /* Green border below navbar */
+      }
+
+      .about-section h1 {
+        font-size: 2em;
+        margin-bottom:10px;
+        color: #ffff00;
+      }
+
+      .about-section p {
+        margin-bottom: 15px;
+        font-family: "Ubuntu", sans-serif;
+        line-height: 1.6;
+      }
+
+      .tools,
+      .frameworks {
+        text-decoration: underline;
+        color: #ffff00;
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      .about-section a {
+        color: #007bff;
+        color: #ffff00;
+        font-family: "Ubuntu", sans-serif;
+        text-decoration:underline;
+      }
+
+      .about-section a:hover {
+        font-family: "Ubuntu", sans-serif;
+        text-decoration: underline;
+      }
+
+     .contact-form {
+    margin: 30px auto; /* Center the form horizontally */
+    text-align: center;
+    max-width: 800px; /* Maximum width */
+    width: 100%; /* Make the form responsive */
+    box-shadow: 0 0 10px #0f0; /* Green shadow effect */
+    padding-top: 50px;
+    padding-left: 20px auto;
+    padding-right: 20px auto;
+    padding-bottom: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center align items vertically */
+}
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 80%;
+        max-width: 600px;
+        padding: 10px;
+        margin: 10px auto;
+        border: 1px solid #0f0;
+        /* Green border */
+        border-radius: 5px;
+        background: #000;
+        /* Black background */
+        color: #0f0;
+        /* Green text color */
+      }
+
+      .contact-form button {
+        background: #0f0;
+        /* Green button background */
+        color: #000;
+        /* Black text color */
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto;
+        /* Center align the button */
+      }
+
+      .contact-form button:hover {
+        background: #00cc00;
+        /* Slightly darker green on hover */
+      }
+
+      .social-media-icons {
+        margin-top: 35px;
+   justify-content: center;
+        display: flex;
+     
+        /* Center align icons horizontally */
+        gap: 20px;
+        /* Space between icons */
+      }
+
+      .social-media-icons a {
+        display: block;
+      }
+      .social-media-icons::before
+       {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjust as needed */
+    left: -5px; /* Adjust as needed */
+    right: -5px; /* Adjust as needed */
+    bottom: -5px; /* Adjust as needed */
+    border-radius: 10px; /* Match your icons' border radius */
+    box-shadow: 
+        0 0 10px #00ff00, /* Glow effect */
+       
+    z-index: -1; /* Ensure it is behind the icons */
+}
+
+      .social-media-icons img {
+        width: 50px;
+        height: 50px;
+       
+        /* Size of social media icons */
+      }
+
+      /* Grid layout for skills section */
+      
+
+      /* Style for skills list items */
+      .home-content {
+        display: flex;
+        align-items: ;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .home-text {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .home-image {
+        flex: 1;
+        position: ;
+      }
+
+      .home-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+        /* Green glow effect */
+        transition: transform 0.3s;
+      }
+
+      .home-image img:hover {
+        transform: scale(1.05);
+      }
+
+      .click-animation {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(0, 255, 0, 0.5);
+        pointer-events: none;
+        width: 30px;
+        height: 30px;
+        transform: scale(0);
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      }
+
+      .click-animation.active {
+        transform: scale(2);
+        opacity: 0;
+      }
+
+      .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+      }
+
+      .project-card {
+        background: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    border-radius: 10px;
+    padding: 20px;
+            overflow-y:scroll;
+            scrollbar-width: none;
+    width: 300px;
+    height: 500px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    
+      }
+
+      .project-card h2 {
+        color: ;
+        position: relative;
+        overflow: hidden;
+
+      }
+      .project-card img {
+        width: 50%;
+        height: 260px;
+        width: 260px;
+        display: block;
+        border: 1px solid #0f0;
+        /* Green border between image and text */
+        border-radius: 5px;
+        /* Remove border radius */
+        margin: 20px;
+        /* Add gap from the top */
+      }
+
+      .project-info {
+        padding: 0px;
+        font: small-caps bold 15px / 1 sans-serif;
+        text-align: center;
+      }
+
+      .project-info h2 {
+        margin: 0 0 10px;
+        font: small-caps bold 15px / 1 sans-serif;
+        font-size: 1.5em;
+      }
+
+      .project-info p {
+        font: small-caps  15px / 1 sans-serif;
+        margin: 0 0 15px;
+      }
+
+      .project-link {
+        display: inline-block;
+        font: small-caps bold 15px / 1 sans-serif;
+        background: #0f0;
+        /* Green button background */
+        color: #000;
+        /* Black text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+
+      .project-link:hover {
+        background: #00cc00;
+        /* Slightly darker green on hover */
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+        /* Green glow effect */
+        transform: scale(1.05);
+        /* Slight scale effect on hover */
+      }
+      .languages {
+  font: small-caps 15px / 1 sans-serif;
+    color: #ffff00;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+        }
+
+        .languages span {
+          
+          backdrop-filter: blur(20px);
+    background: rgba(17, 27, 172, 0.1);
+    border: 1px solid #00ff11;
+      
+            padding: 5px 10px;
+            border-radius: 5px;
+}
+.projectmin {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #0dfd35;
+        }
+        .projects h2 {
+          font-size: 2rem;
+          overflow:hidden;
+          
+            margin-bottom: 12px;
+            color:rgb(110, 190, 255);
+        }
+        .projectmin h3 {
+          font: small-caps 25px / 1 sans-serif;
+            margin-bottom: 8px;
+            color:rgb(110, 190, 255);
+        }
+
+        .projectmin p {
+          font: small-caps 15px / 1 sans-serif;
+            margin-bottom: 10px;
+        }
+
+      .project-card:hover {
+        box-shadow: 0 0 25px rgba(0, 255, 0, 0.7);
+        /* Enhanced green glow effect on hover */
+        transform: scale(1);
+        /* Slight scale effect on hover */
+      }
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1e1e1e; /* Dark background */
+    color: #00ff00; /* Neon green text */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 700; /* Bold text */
+    border: 2px solid #00ff00; /* Neon green border */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Neon green shadow */
+}
+
+
+.resume-btn:hover {
+    background-color: #00ff00; /* Neon green background on hover */
+    color: #1e1e1e; /* Dark text color on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.7); /* Brighter shadow on hover */
+}
+
+.resume-btn:active {
+    background-color: #00cc00; /* Slightly darker green on click */
+    color: #1e1e1e; /* Dark text color on click */
+    box-shadow: 0 3px 6px rgba(0, 255, 0, 0.5); /* Smaller shadow on click */
+}
+
+
+      
+      #fullscreen-btn {
+    position: fixed;
+    bottom: 20px; /* Aligns the button to the bottom */
+    right: 20px;  /* Keeps the button on the right side */
+    width: 60px;
+    height: 60px;
+    background-color: #00ff00; /* Neon green, classic hacker color */
+    color: black; /* Text color to contrast with the button */
+    border: 2px solid #00ff00;
+    border-radius: 50%; /* Makes the button round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it's on top */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* Glowing effect */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#fullscreen-btn:hover {
+    background-color: black; /* Inverts colors on hover for hacker feel */
+    color: #00ff00;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+}
+
+#fullscreen-btn:focus {
+    outline: none;
+}
+
+
+.neumorphic-footer {
+  font: small-caps bold 15px / 1 sans-serif;
+    background-color: #000000; /* Dark background */
+    color: #00ff00; /* Green text */
+    padding:1px;
+    margin-top: 60px;
+    text-align: center;
+    border-radius:5px; /* Rounded corners */
+    box-shadow: 
+        8px 8px 20px rgba(0, 0, 0, 0.3), /* Outer shadow */
+        -8px -8px 20px rgba(0, 0, 0, 0.1); /* Inner shadow */
+   
+    position: relative; /* Position relative for glow effect */
+}
+
+.neumorphic-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    color: #0f0;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid #ff4314;
+    box-shadow: 0 0 10px #0f0;
+    border-top: 2px solid #0f0;
+     
+    z-index: -1; /* Behind the footer content */
+}
+/* Style for the scroll indicator */
+#scrollIndicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #3eff44; /* You can change the color as you like */
+  z-index: 99; /* Ensure it appears on top */
+  box-shadow: 0 0 10px #00ff00, 
+              0 0 20px #00ff00, 
+              0 0 30px #00ff00, 
+              0 0 40px #00ff00, 
+              0 0 50px #00ff00, 
+             
+  
+  /* Add transition to make it smooth */
+  transition: width 0.2s ease-out;
+}
+Explanation:
+}
+
+
+
+</style>
+  <body>
+ <!-- Scroll Indicator -->
+<div id="scrollIndicator"></div>
+
+ 
+    <div class="navbar">
+      <div class="logo">
+        <img src="https://i.ibb.co/ccqCJcD/l-1.png" alt="Logo Image">
+        <span>_j0e_Mj</span>
+      </div>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <div class="menu">
+        <a href="#home">kome</a>
+            <a href="#about">About</a>
+ <a href="#projects">projects</a>
+            <a href="#skills">skills</a>
+
+            <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div id="home" class="content active">
+      <div class="home-content">
+        <div class="home-text">
+          <h1>Home</h1>
+          <span class="first-part" style="color: #73c5ff;">Iam Jothish aka Joe</span>
+          <br>
+          <span class="developer" style="color:#f56200;">[FULL-STACK DEVELOPER]</span>
+          <span class="cybersecurity" style="color:#ffffff;">[CYBERSECURITY ENTHUSIAST]</span>
+          <span class="blockchain" style="color:#00ff22;">[BLOCKCHAIN FANATIC]</span>
+          <br>
+<br>
+          <a href="resume.pdf" class="resume-btn">Resume</a>
+        </div>
+        <div class="home-image">
+          <img src= "https://i.ibb.co/ccqCJcD/l-1.png" alt="Profile Photo">
+        </div>
+      </div>
+      <!-- Virtual Keyboard -->
+      <div class="keyboard-container">
+        <input type="text" id="keyboard-input" placeholder="Joe_Mj" >
+        <div class="keyboard">
+          <div class="key-row">
+            <div class="key">Q</div>
+            <div class="key">W</div>
+            <div class="key">E</div>
+            <div class="key">R</div>
+            <div class="key">T</div>
+            <div class="key">Y</div>
+            <div class="key">U</div>
+            <div class="key">I</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+          </div>
+          <div class="key-row">
+            <div class="key">A</div>
+            <div class="key">S</div>
+            <div class="key">D</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+ <div class="key">Bs</div>
+          </div>
+          <div class="key-row">
+
+           
+            <div class="key">Z</div>
+            <div class="key">X</div>
+            <div class="key">C</div>
+            <div class="key">V</div>
+ <div class="key">_</div>
+            <div class="key">B</div>
+            <div class="key">N</div>
+            <div class="key">M</div>
+ 
+            <div class="key">Ent</div>
+          </div>
+          <div class="key-row"></div>
+        </div>
+  <button id="fullscreen-btn">🤖</button>
+      </div>
+    </div>
+</div>
+    <!-- Your existing sections for About, Projects, Skills, and Contact -->
+    <!-- ... -->
+    <div id="about" class="about-section" style="scroll-behavior: smooth;">
+        
+      <h1>About Me</h1>
+      <p>Hello, I'm Jothish, currently pursuing a Bachelor's degree with a keen interest in various tech fields including cybersecurity, blockchain, web development, and cloud computing.</p>
+      <p>I have hands-on experience with cybersecurity tools such as <span class="tools">Nmap</span>, <span class="tools">Wireshark</span>, and many others. I am proficient in programming languages like <span class="tools">Python</span>, <span class="tools">PHP</span>, and have familiarity with <span class="tools">Java</span>, <span class="tools">C</span>, and <span class="tools">JavaScript</span>. Additionally, I am skilled in database tools like <span class="tools">MongoDB</span> and <span class="tools">Oracle</span>, and frameworks such as <span class="frameworks">Django</span> and <span class="frameworks">Flask</span>. </p>
+      <p>I am eager to work in a reputed company with a positive environment and supportive colleagues. I am excited about the opportunity to test my skills on real-time problems and contribute effectively to a dynamic team.</p>
+    </div>
+</div>
+</div>
+</div>
+
+<div id="projects" class="">
+  <h1>Projects</h1>
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="https://i.ibb.co/613TRLQ/DALL-E-2024-10-12-19-51-07-A-minimalist-hacker-themed-portfolio-display-image-with-the-word-Portfoli.webp" alt="Project Image">
+      <div class="project-info">
+        <h2>Portfolio</h2>
+        <p>Personal Portfolio To Showcase My Skills Projects with Simple UI Design </p>
+        <div class="languages">
+          <span>Html</span>
+          <span>Css</span>
+          <span>Js</span>
+          <span>Node.Js</span>
+          <span>MangoDb</span>
+          
+          <br>
+      </div>
+      <br>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+    
+    
+    <div class="project-card">
+      <img src="https://i.ibb.co/mcYxLkt/DALL-E-2024-10-12-20-10-44-A-minimalistic-blockchain-themed-interface-with-Meta-Mask-and-Ethereum-el.webp" alt="Project Image">
+      <div class="project-info">
+        <h2>BlockChain TimeCapsule</h2>
+        <p>Blockchain: A secure, decentralized ledger for transparent, tamper-proof transactions.</p>
+        <div class="languages">
+          <span>MetaMask</span>
+          <span>Ethereum</span>
+          <span>Solidity</span>
+          <span>Django</span>
+       
+          
+          <br>
+      </div>
+      <br>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+    <div class="project-card">
+      <h2>Mini Projects</h2>
+      <div class="projects">
+       
+        <div class="projectmin">
+          
+            <h3>Music app Using SPOTIFY </h3>
+            <p> A simple music player using spoyify api with search bar and iframes from api SPOTIFY</p>
+            <div class="languages">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Js</span>
+                <span>SPOTIFY API</span>
+            </div>
+            <br>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="projectmin">
+            <h3>QR Code Generator</h3>
+            <p>generate Qr code and also downloads it</p>
+            <div class="languages">
+                <span>Html</span>
+                <span>Css</span>
+                <span>Js</span>
+                
+            </div>
+            <br>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="projectmin">
+            <h3>Project 3: Blog Platform</h3>
+            <p>An online blogging platform where users can write, edit, and share articles.</p>
+            <div class="languages">
+                <span>Vue.js</span>
+                <span>Python</span>
+                <span>Django</span>
+                <span>SQLite</span>
+            </div>
+            <br>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    </div>
+    </div>
+  </div>
+
+
+<div id="skills" class="">
+  <h1>Skills</h1>
+ <div class="skills-container">
+   
+
+    <!-- Frontend Section -->
+    <div class="skills-section">
+      <h2 class="section-title">Frontend</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <span class="glitch" data-text="HTML5">HTML5</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="CSS3">CSS3</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="JavaScript">JavaScript</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="React.js">React.js</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Section -->
+    <div class="skills-section">
+      <h2 class="section-title">Backend</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <span class="glitch" data-text="Node.js">Node.js</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="SQL">SQL</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="MongoDB">MongoDB</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="Django">Django</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Section -->
+    <div class="skills-section">
+      <h2 class="section-title">Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <span class="glitch" data-text="Docker">Docker</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="AWS">AWS</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="ChatGPT">ChatGPT</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blockchain Section -->
+    <div class="skills-section">
+      <h2 class="section-title">Blockchain</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <span class="glitch" data-text="Solidity">Solidity</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="Ethereum">Ethereum</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="MetaMask">MetaMask</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="skills-section">
+      <h2 class="section-title">Languages</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <span class="glitch" data-text="Python">Python</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="JavaScript">JavaScript</span>
+        </div>
+        <div class="skill-box">
+          <span class="glitch" data-text="SQL">SQL</span>
+        </div>
+      </div>
+    </div>
+  </div>  </div>
+
+
+  
+<div id="contact" class="">
+  <h1>Contact</h1>
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div class="social-media-icons">
+    <a href="https://github.com/Joe6905" target="_blank">
+      <img src="C:\Users\Jothish\Documents\portfoliojoe\img\l (4).png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/jothiramalingam" target="_blank">
+      <img src="C:\Users\Jothish\Documents\portfoliojoe\img\l (2).png" alt="LinkedIn">
+    </a>
+    <a href="https://instagram.com/Jothish____m" target="_blank">
+      <img src="C:\Users\Jothish\Documents\portfoliojoe\img\l (5).png" alt="Instagram">
+    </a>
+    <a href="https://youtube.com/Mj_here" target="_blank">
+      <img src="C:\Users\Jothish\Documents\portfoliojoe\img\l (6).png" alt="YouTube">
+    </a>
+    <a href="https://www.facebook.com/sma.adhish.12/" target="_blank">
+      <img src="C:\Users\Jothish\Documents\portfoliojoe\img\facebook (1).png" alt="Facebook">
+    </a>
+  </div>
+
+
+  <footer class="neumorphic-footer">
+    <p>Made by Joe with ❤️</p>
+</footer>
+  </body>
+</html>
+
+<script>
+// script.js
+
+// Functions
+function showSection(id) {
+  document.querySelectorAll('.content').forEach(section => {
+    section.classList.remove('active');
+  });
+
+  const targetSection = document.getElementById(id);
+  targetSection.classList.add('active');
+
+  // Custom smooth scroll behavior
+  const yOffset = -50; // Optional: Offset to account for fixed headers
+  const yPosition = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({
+    top: yPosition,
+    behavior: 'smooth'
+  });
+}
+
+function toggleMenu() {
+  document.querySelector('.navbar').classList.toggle('active');
+}
+
+  // Click animation effect
+  document.addEventListener('click', function(e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    let clickEffect = document.createElement('div');
+    clickEffect.className = 'click-animation';
+    clickEffect.style.left = `${x}px`;
+    clickEffect.style.top = `${y}px`;
+    document.body.appendChild(clickEffect);
+    setTimeout(() => {
+      clickEffect.classList.add('active');
+      setTimeout(() => {
+        clickEffect.remove();
+      }, 300);
+    }, 0);
+  });
+ document.getElementById("fullscreen-btn").addEventListener("click", function() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
+            }
+        }); 
+
+const keys = document.querySelectorAll('.key');
+const inputField = document.getElementById('keyboard-input');
+
+// Handle clicks from the virtual keyboard
+keys.forEach(key => {
+  key.addEventListener('click', () => {
+    const keyValue = key.textContent;
+    if (keyValue === 'Space') {
+      inputField.value += ' ';
+    } else if (keyValue === 'Enter') {
+      inputField.value += '\n';
+    } else if (keyValue === 'Backspace') {
+      inputField.value = inputField.value.slice(0, -1); // Remove the last character
+    } else {
+      inputField.value += keyValue;
+    }
+  });
+});
+
+// Show section with smooth scroll behavior
+function showSection(id) {
+  document.querySelectorAll('.content').forEach(section => {
+    section.classList.remove('active');
+  });
+
+  const targetSection = document.getElementById(id);
+  targetSection.classList.add('active');
+
+  // Custom smooth scroll behavior
+  const yOffset = -50; // Optional: Offset for fixed header
+  const yPosition = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({
+    top: yPosition,
+    behavior: 'smooth'
+  });
+}
+
+// Toggle navigation menu
+function toggleMenu() {
+  document.querySelector('.navbar').classList.toggle('active');
+}
+
+// Scroll indicator logic
+window.onscroll = function() {
+  updateScrollIndicator();
+};
+
+function updateScrollIndicator() {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercentage = (scrollTop / scrollHeight) * 100;
+  
+  document.getElementById("scrollIndicator").style.width = scrollPercentage + "%";
+}
+
+
+// Handle key presses from the physical keyboard
+inputField.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    inputField.value += '\n';
+     // Prevents the default action of the Enter key (form submission in some cases)
+  } else if (event.key === ' ') {
+    inputField.value += ' ';
+ // Prevents the default action of the Space key (scrolling in some cases)
+  } else if (event.key === 'Backspace') {
+    inputField.value = inputField.value.slice(0, -1); // Remove the last character
+    // Prevents the default backspace behavior
+  }
+});
+// Make sure to refocus input on fullscreen change if needed
+document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+            inputField.focus(); // Refocus the input field when entering fullscreen
+        }
+    });
+
+    // Optional: Check for fullscreen API compatibility
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    }
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+// Function to toggle fullscreen mode
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
+// Event listener for button click
+fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+// Event listener for key press
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'f' || event.key === 'F') {
+        toggleFullscreen();
+    }
+});
+
+</script>
+</body>
+</html>
