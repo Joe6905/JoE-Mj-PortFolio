@@ -1023,7 +1023,7 @@ width:100%;
   }
 }
     
-        .input-container {
+.input-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1061,7 +1061,7 @@ width:100%;
             font-family: 'Courier New', Courier, monospace;
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
-            position: fixe;
+            position: absolute;
             top: 100px;
             left: 100px;
             display: none;
@@ -1106,7 +1106,7 @@ width:100%;
         .command-line {
             margin: 0;
         }
-        .custom-alert {
+         .custom-alert {
             background-color: #1a1a1a;
             color: #00ff00;
             border: 2px solid #00ff00;
@@ -1114,12 +1114,20 @@ width:100%;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
             position: fixed;
-            top: 50%;
+            top: 50%; /* Start position off-screen */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             z-index: 1000;
             display: none; /* Hidden by default */
             text-align: center;
+            opacity: 0; /* Start transparent */
+            transition: top 0.5s ease, opacity 0.5s ease; /* Animation for showing */
+        }
+
+        .custom-alert.show {
+            display: block; /* Show the alert */
+            top: 50%; /* Slide into view */
+            opacity: 1; /* Fade in */
         }
 
         .custom-alert button {
@@ -1130,10 +1138,12 @@ width:100%;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            opacity: 1; /* Start fully visible */
+            transition: opacity 1s ease; /* Animation for fading out */
         }
 
-        .custom-alert button:hover {
-            background-color: #00cc00;
+        .custom-alert button.fade-out {
+            opacity: 0; /* Fade out effect */
         }
 
         #overlay {
@@ -1150,23 +1160,15 @@ width:100%;
 
 <body>
     <!-- Scroll Indicator -->
+    
+    <div id="scrollIndicator"></div>
     <div id="overlay"></div>
 
-    
     <div class="custom-alert" id="customAlert">
-      <p id="alertMessage">This is a custom hacker alert!</p>
-      <button onclick="closeAlert()">Close</button>
-      
-  </div>
-  <div class="custom-alert" id="customAlert">
-    <p id="alertMessage">This is a c hacker alert!</p>
-    <button onclick="closeAlert()">Close</button>
-    
-</div>
+        <p id="alertMessage">This is a custom hacker alert!</p>
+        <button id="closeButton" onclick="closeAlert()">Close</button>
+    </div>
 
-    
-
-    <div id="scrollIndicator"></div>
     <div class="navbar">
         <div class="logo"> <img src="https://i.ibb.co/ccqCJcD/l-1.png" alt="Logo Image"> <span>_j0e_Mj</span> </div> <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="menu"> <a href="#home">Home</a> <a href="#about">About</a> <a href="#projects">projects</a> <a href="#skills">skills</a> <a href="#contact">Contact</a> </div>
@@ -1316,7 +1318,34 @@ width:100%;
 </html>
 <script>
     // script.js
-    
+    function showAlert() {
+            const alertMessage = document.getElementById('alertMessage');
+            const overlay = document.getElementById('overlay');
+            const customAlert = document.getElementById('customAlert');
+
+            alertMessage.innerText = "This is a hacker-themed alert!";
+            overlay.style.display = 'block'; // Show overlay
+            customAlert.classList.add('show'); // Trigger slide down and fade in
+
+            // Set timeout to fade out the close button after the alert is shown
+            const closeButton = document.getElementById('closeButton');
+            setTimeout(() => {
+                closeButton.classList.add('fade-out'); // Start fade out
+            }, 3000); // Wait for 3 seconds before fading out
+        }
+
+        function closeAlert() {
+            const overlay = document.getElementById('overlay');
+            const customAlert = document.getElementById('customAlert');
+            const closeButton = document.getElementById('closeButton');
+
+            closeButton.classList.remove('fade-out'); // Reset fade out class
+            overlay.style.display = 'none'; // Hide overlay
+            customAlert.classList.remove('show'); // Remove the show class
+        }
+
+        // Automatically show the alert when the page loads
+        window.onload = showAlert;
     // Functions
     function showSection(id) {
       document.querySelectorAll('.content').forEach(section => {
@@ -1569,28 +1598,9 @@ directory2/`,
         document.addEventListener('mouseup', function() {
             isDragging = false;
         });
-         function showAlert() {
-            const alertMessage = document.getElementById('alertMessage');
-            const overlay = document.getElementById('overlay');
-            const customAlert = document.getElementById('customAlert');
-
-            alertMessage.innerText = "WELCOME TO MY PAGE STILL UNDER CONSTARUCTION ⚠️";
-            
-            overlay.style.display = 'block'; // Show overlay
-            customAlert.style.display = 'block'; // Show custom alert
-        }
-
-        function closeAlert() {
-            const overlay = document.getElementById('overlay');
-            const customAlert = document.getElementById('customAlert');
-
-            overlay.style.display = 'none'; // Hide overlay
-            customAlert.style.display = 'none'; // Hide custom alert
-        }
-
-        // Automatically show the alert when the page loads
-        window.onload = showAlert;
 </script>
 </body>
 
 </html>
+
+            
