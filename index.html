@@ -236,168 +236,179 @@
           }
     
           .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top:25px;
-            height:35px;
-           
-            
-    width:99%;
-            padding: 10px;
-     border-radius: 10px;
-            position: fixed;
-            z-index: 1; /* Ensure navbar is above the canvas */
-            color: #0f0;
-            backdrop-filter: blur(20px);
-        background: rgba(43, 255, 1, 0.15);
-        border: 1px solid #ff4314;
-            /* Green text color */
-            box-shadow: 0 0 10px #0f0;
-            /* Green shadow effect */
-            border-bottom: 2px solid #0f0;
-            /* Green border below navbar */
-          }
-    
-          .navbar .logo {
-            color: #e2e0c0;
-            /* Text color */
-            font-weight: bold;
-            font: small-caps bold 15px/1 sans-serif;
-            font-size: 2em;
-          }
-    
-    
-          .logo {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            /* Adjust the font size as needed */
-            font-weight: bold;
-            color: #000;
-            /* Text color */
-          }
-    
-          .logo img {
-            width: 40px;
-            /* Adjust the width as needed */
-            height: auto;
-            /* Maintain aspect ratio */
-            margin-right: 10px;
-            /* Space between image and text */
-          }
-    
-          .logo span {
-        display: inline-block;
-        font-size: 2rem; /* Adjust font size */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:25px;
+       
+        margin-left: 25px;
+width:95%;
+        padding: 10px;
+ border-radius: 10px;
+        position: fixed;
+        z-index: 1; /* Ensure navbar is above the canvas */
+        color: #0f0;
+        backdrop-filter: blur(20px);
+    background: rgba(43, 255, 1, 0.15);
+    border: 1px solid #ff4314;
+        /* Green text color */
+        box-shadow: 0 0 10px #0f0;
+        /* Green shadow effect */
+        border-bottom: 2px solid #0f0;
+        /* Green border below navbar */
+      }
+
+      .navbar .logo {
+        color: #00f00;
+        /* Text color */
         font-weight: bold;
-        color: #00ff00; /* Neon green */
-        white-space: nowrap; /* Prevent text wrapping */
-        overflow: hidden; /* Hide text that hasn't been "typed" yet */
-        border-right: 2px solid #00ff00; /* Blinking cursor */
-        width: 7ch; /* Match the number of characters */
-        animation: typing 4s steps(7, end) infinite, blink 0.75s step-end infinite alternate;
+        font: small-caps bold 15px/1 sans-serif;
+        font-size: 2em;
+      }
+
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        /* Adjust the font size as needed */
+        font-weight: bold;
+        color: #000;
+        /* Text color */
+      }
+
+      .logo img {
+        width: 40px;
+        /* Adjust the width as needed */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-right: 10px;
+        /* Space between image and text */
+      }
+
+      .logo span {
+    display: inline-block;
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold;
+    color: #00ff00; /* Neon green */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide text that hasn't been "typed" yet */
+    border-right: 2px solid #00ff00; /* Blinking cursor */
+    width: 7ch; /* Match the number of characters */
+    animation: typing 4s steps(7, end) infinite, blink 0.75s step-end infinite alternate;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
     }
-    
-    @keyframes typing {
-        0% {
-            width: 0;
-        }
-        50% {
-            width: 7ch; /* Number of characters */
-        }
-        60% {
-            width: 7ch; /* Pause for a moment at full text */
-        }
-        100% {
-            width: 0; /* Erase the text */
-        }
+    50% {
+        width: 7ch; /* Number of characters */
     }
-    
-    @keyframes blink {
-        from {
-            border-right-color: #00ff00;
-        }
-        to {
-            border-right-color: transparent;
-        }
+    60% {
+        width: 7ch; /* Pause for a moment at full text */
     }
-    
-          .navbar .menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-           
-            
-           
-           
-            border: 1px solid #0f0;
-            /* Green border */
-            border-radius: 5px;
-            width: 200px;
-            gap: 14px;
-            display: none;
-          }
-    
-          .navbar .menu a {
-            color: #fff000;
-           
-            /* Green text color */
-           font: small-caps bold 15px/1 sans-serif; 
-            text-decoration: none;
-           margin: 20px 10;
-            display: block;
-           
-            text-align: center;
-            position: relative;
-            /* Position relative for the hover effect */
-            padding: 10px;
-            transition: color 0.3s ease;
-          }
-    
-          .navbar .menu a:hover {
-            color: #00cc00;
-          }
-    
-          .navbar .menu a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #0f0;
-            /* Green underline */
-            left: 0;
-            bottom: 0;
-            transition: width 0.3s ease;
-          }
-    
-          .navbar .menu a:hover::after {
-            width: 100%;
-            /* Expand underline to full width on hover */
-          }
-    
-          /* Background glow effect on hover */
-          .navbar .menu a:hover {
-            background: rgba(0, 255, 0, 0.1);
-            /* Subtle green background on hover */
-            box-shadow: 0 0 5px #0f0;
-            /* Green glow effect */
-          }
-    
-          .navbar .menu-btn {
-            font-size: 30px;
-            cursor: pointer;
-            color: #0f0;
-            /* Green text color */
-            background: none;
-            border: none;
-            margin-left: 10px;
-          }
-    
-          .navbar.active .menu {
-            display: flex;
-          }
+    100% {
+        width: 0; /* Erase the text */
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: #00ff00;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+      .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+       
+        top:70px;
+        right: 20px;
+       
+        border: 1px solid #0f0;
+        /* Green border */
+        border-radius: 5px;
+        width: 200px;
+        gap: 14px;
+        display: none;
+      }
+
+      .navbar .menu a {
+        color: #fff000;
+       
+        /* Green text color */
+       font: small-caps bold 15px/1 sans-serif; 
+        text-decoration: none;
+       margin: 20px 10;
+        display: block;
+       
+        text-align: center;
+        position: relative;
+        /* Position relative for the hover effect */
+        padding: 10px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar .menu a:hover {
+        color: #00cc00;
+      }
+
+      .navbar .menu a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #0f0;
+        /* Green underline */
+        left: 0;
+        bottom: 0;
+        transition: width 0.3s ease;
+      }
+
+      .navbar .menu a:hover::after {
+        width: 100%;
+        /* Expand underline to full width on hover */
+      }
+
+      /* Background glow effect on hover */
+      .navbar .menu a:hover {
+        background: rgba(0, 255, 0, 0.1);
+        /* Subtle green background on hover */
+        box-shadow: 0 0 5px #0f0;
+        /* Green glow effect */
+      }
+
+      .navbar .menu-btn {
+        font-size: 30px;
+        cursor: pointer;
+        color: #0f0;
+        /* Green text color */
+        background: none;
+        border: none;
+        margin-right: 10px;
+      }
+
+      .navbar.active .menu {
+        display: flex;
+      }
+
+      .content {
+        padding: 50px;
+        display: none;
+        scroll-behavior: smooth;
+      }
+
+      .content.active {
+      display: block;
+        scroll-behavior: smooth;
+      }
+
     
           .content {
             padding: 50px;
