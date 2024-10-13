@@ -450,7 +450,7 @@
           }
     
           .home-image img {
-            max-width: 100%;
+           
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
             /* Green glow effect */
@@ -693,12 +693,16 @@
          
             /* Center align icons horizontally */
             gap: 20px;
+           
             /* Space between icons */
           }
     
           .social-media-icons a {
             display: block;
           }
+          .icon:hover {
+  box-shadow: 0px 0px 20px 10px rgba(0, 255, 0, 0.9); /* More intense glow on hover */
+}
           .social-media-icons::before
            {
         content: '';
@@ -717,6 +721,7 @@
           .social-media-icons img {
             width: 50px;
             height: 50px;
+            border-radius: 50%;
            
             /* Size of social media icons */
           }
@@ -743,7 +748,7 @@
           }
     
           .home-image img {
-            max-width: 100%;
+            
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
             /* Green glow effect */
@@ -1013,12 +1018,41 @@
       /* Add transition to make it smooth */
     }
     
+    .social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.neon-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.8); /* Default green */
+}
+
+.neon-icon:hover {
+  transform: scale(1.1);
+  animation: neon-colors 3s infinite alternate;
+}
+
+/* Multi-colored neon animation */
+@keyframes neon-colors {
+  0% {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.8), /* Green */
+                0 0 30px 10px rgba(0, 255, 0, 0.6),
+                0 0 45px 20px rgba(0, 255, 0, 0.4);
+  }
+}
     
 </style>
 
 <body>
     <!-- Scroll Indicator -->
-    <div class="scroll-container"></div>
+    
     <div id="scrollIndicator"></div>
     <div class="navbar">
         <div class="logo"> <img src="https://i.ibb.co/ccqCJcD/l-1.png" alt="Logo Image"> <span>_j0e_Mj</span> </div> <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -1034,7 +1068,7 @@
         <div class="keyboard-container"> <input type="text" id="keyboard-input" placeholder="Joe_Mj">
             <div class="keyboard">
                 <div class="key-row">
-                    <div class="key">Q</div>
+                    <div class="key">e</div>
                     <div class="key">W</div>
                     <div class="key">E</div>
                     <div class="key">R</div>
@@ -1172,11 +1206,23 @@
         <div id="contact" class="">
             <h1>Contact</h1>
             <form class="contact-form"> <input type="text" name="name" placeholder="Your Name" required> <input type="email" name="email" placeholder="Your Email" required> <textarea name="message" placeholder="Your Message" required></textarea> <button type="submit">Send</button> </form>
-            <div class="social-media-icons"> <a href="https://github.com/Joe6905" target="_blank"> <img src="https://i.ibb.co/27FC7zt/l-6.png" alt="GitHub"> </a> <a href="https://www.linkedin.com/in/jothiramalingam" target="_blank"> <img src="https://i.ibb.co/X8t8d8b/l-2.png" alt="LinkedIn"> </a> <a href="https://instagram.com/Jothish____m" target="_blank"> <img src="https://i.ibb.co/wS2Vk5w/icons8-twitterx-500.png" alt="Instagram"> </a> <a href="https://youtube.com/Mj_here" target="_blank"> <img src="https://i.ibb.co/X8t8d8b/l-2.png" alt="YouTube"> </a> <a href="https://www.facebook.com/sma.adhish.12/" target="_blank"> <img src="C:\Users\Jothish\Documents\portfoliojoe\img\facebook (1).png" alt="Facebook"> </a> </div>
+            <div class="social-media-icons">
+              <a href="https://github.com/Joe6905" target="_blank">
+                <img src="https://i.ibb.co/HrDzCHB/l-4.png" alt="GitHub" class="neon-icon">
+              </a>
+              <a href="https://www.linkedin.com/in/jothiramalingam" target="_blank">
+                <img src="https://i.ibb.co/X8t8d8b/l-2.png" alt="LinkedIn" class="neon-icon">
+              </a>
+              <a href="https://youtube.com/Mj_here" target="_blank">
+                <img src="https://i.ibb.co/27FC7zt/l-6.png" alt="YouTube" class="neon-icon">
+              </a>
+            </div>
+            
+            
             <footer class="neumorphic-footer">
                 <p>Made by Joe with ❤️</p>
             </footer>
-        </div>
+        
 </body>
 
 </html>
