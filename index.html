@@ -552,43 +552,7 @@ width:100%;
           }
     
           /* Keyboard styles */
-          .keyboard {
-            display: grid;
-            grid-template: repeat(10, 50px);
-            gap: 1px;
-            margin-top: 20px;
-          }
-    
-          .key-row {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 10px;
-          }
-    
-          /* Key button styles */
-          .key {
-            border: 2px solid #00ff00;
-            color: #00ff00;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-          }
-    
-          /* Key button hover effect */
-          .key:hover {
-            background-color: #00ff00;
-            color: #1b1b1b;
-            transform: scale(1.1);
-          }
-    
-          /* Key button active effect */
-          .key:active {
-            background-color: #00cc00;
-            color: #1b1b1b;
-          }
+          
     
           .resume-btn:hover {
             background: #00cc00;
@@ -1059,11 +1023,149 @@ width:100%;
   }
 }
     
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #00ff00;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: #0d0d0d;
+            color: #00ff00;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Terminal styles for hacker theme */
+        .terminal {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            width: 400px;
+            height: 300px;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+            position: fixe;
+            top: 100px;
+            left: 100px;
+            display: none;
+            border: 2px solid #00ff00;
+            resize: both; /* Allows resizing */
+            overflow: hidden; /* Hide scrollbar */
+        }
+
+        .terminal-header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            cursor: move;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #00ff00;
+        }
+
+        #terminal-content {
+            padding: 10px;
+            height: calc(100% - 50px);
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+
+        /* Hide scrollbar for WebKit-based browsers */
+        #terminal-content::-webkit-scrollbar {
+            width: 0; /* Remove scrollbar space */
+            display: none; /* Optional: hide the scrollbar */
+        }
+
+        /* Hide scrollbar for other browsers (e.g., Firefox, Edge) */
+        #terminal-content {
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .command-line {
+            margin: 0;
+        }
+        .custom-alert {
+            background-color: #1a1a1a;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            text-align: center;
+        }
+
+        .custom-alert button {
+            background-color: #00ff00;
+            border: none;
+            color: #0d0d0d;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .custom-alert button:hover {
+            background-color: #00cc00;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; /* Hidden by default */
+            z-index: 999;
+        }
 </style>
 
 <body>
     <!-- Scroll Indicator -->
+    <div id="overlay"></div>
+
     
+    <div class="custom-alert" id="customAlert">
+      <p id="alertMessage">This is a custom hacker alert!</p>
+      <button onclick="closeAlert()">Close</button>
+      
+  </div>
+  <div class="custom-alert" id="customAlert">
+    <p id="alertMessage">This is a c hacker alert!</p>
+    <button onclick="closeAlert()">Close</button>
+    
+</div>
+
+    
+
     <div id="scrollIndicator"></div>
     <div class="navbar">
         <div class="logo"> <img src="https://i.ibb.co/ccqCJcD/l-1.png" alt="Logo Image"> <span>_j0e_Mj</span> </div> <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -1076,44 +1178,19 @@ width:100%;
             </div>
             <div class="home-image"> <img src="https://i.ibb.co/ccqCJcD/l-1.png" alt="Profile Photo"> </div>
         </div> <!-- Virtual Keyboard -->
-        <div class="keyboard-container"> <input type="text" id="keyboard-input" placeholder="Joe_Mj">
-            <div class="keyboard">
-                <div class="key-row">
-                    <div class="key">e</div>
-                    <div class="key">W</div>
-                    <div class="key">E</div>
-                    <div class="key">R</div>
-                    <div class="key">T</div>
-                    <div class="key">Y</div>
-                    <div class="key">U</div>
-                    <div class="key">I</div>
-                    <div class="key">O</div>
-                    <div class="key">P</div>
-                </div>
-                <div class="key-row">
-                    <div class="key">A</div>
-                    <div class="key">S</div>
-                    <div class="key">D</div>
-                    <div class="key">F</div>
-                    <div class="key">G</div>
-                    <div class="key">H</div>
-                    <div class="key">J</div>
-                    <div class="key">K</div>
-                    <div class="key">L</div>
-                    <div class="key">Bs</div>
-                </div>
-                <div class="key-row">
-                    <div class="key">Z</div>
-                    <div class="key">X</div>
-                    <div class="key">C</div>
-                    <div class="key">V</div>
-                    <div class="key">_</div>
-                    <div class="key">B</div>
-                    <div class="key">N</div>
-                    <div class="key">M</div>
-                    <div class="key">Ent</div>
-                </div>
-                <div class="key-row"></div>
+        <div class="input-container">
+          <label for="command">Enter Command:</label>
+          <input type="text" id="command" name="command" placeholder="Type 'cmd' and press Enter">
+      </div>
+      <div id="terminal" class="terminal">
+        <div class="terminal-header">
+            <span>Hacker Terminal</span>
+        </div>
+        <div id="terminal-content">
+            <p class="command-line">Initializing...</p>
+            <p class="command-line">$ <span id="terminal-input"></span></p>
+        </div>
+    </div>
             </div> <button id="fullscreen-btn">🤖</button>
         </div>
     </div>
@@ -1295,20 +1372,7 @@ width:100%;
     const inputField = document.getElementById('keyboard-input');
     
     // Handle clicks from the virtual keyboard
-    keys.forEach(key => {
-      key.addEventListener('click', () => {
-        const keyValue = key.textContent;
-        if (keyValue === 'Space') {
-          inputField.value += ' ';
-        } else if (keyValue === 'Enter') {
-          inputField.value += '\n';
-        } else if (keyValue === 'Backspace') {
-          inputField.value = inputField.value.slice(0, -1); // Remove the last character
-        } else {
-          inputField.value += keyValue;
-        }
-      });
-    });
+    
     
     // Show section with smooth scroll behavior
     function showSection(id) {
@@ -1349,18 +1413,7 @@ width:100%;
     
     
     // Handle key presses from the physical keyboard
-    inputField.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-        inputField.value += '\n';
-         // Prevents the default action of the Enter key (form submission in some cases)
-      } else if (event.key === ' ') {
-        inputField.value += ' ';
-     // Prevents the default action of the Space key (scrolling in some cases)
-      } else if (event.key === 'Backspace') {
-        inputField.value = inputField.value.slice(0, -1); // Remove the last character
-        // Prevents the default backspace behavior
-      }
-    });
+   
     // Make sure to refocus input on fullscreen change if needed
     document.addEventListener('fullscreenchange', () => {
             if (document.fullscreenElement) {
@@ -1394,7 +1447,149 @@ width:100%;
             toggleFullscreen();
         }
     });
-    
+        const terminalContent = document.getElementById('terminal-content');
+        const terminalInput = document.getElementById('terminal-input');
+        const terminal = document.getElementById('terminal');
+
+        // List of available commands with their responses
+        const commands = {
+            help: 'Available commands: help, clear, about, exit, ipconfig, git status, ls, pwd, echo, whoami, date, uname',
+            clear: '',
+            about: 'This is a simple hacker-themed terminal. Author: Joe6905',
+            exit: 'Closing terminal...',
+            ipconfig: `IP Configuration:
+    IPv4 Address: 192.168.1.2
+    Subnet Mask: 255.255.255.0
+    Default Gateway: 192.168.1.1`,
+            'git status': `On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Nothing to commit, working tree clean`,
+            ls: `file1.txt
+file2.txt
+directory1/
+directory2/`,
+            pwd: '/home/user/projects',
+            echo: 'Echo is a command used to display a line of text.',
+            whoami: 'You are user.',
+            date: new Date().toLocaleString(),
+            uname: 'Operating System: Linux 5.4.0-42-generic'
+        };
+
+        // Function to process and display terminal commands
+        function processCommand(command) {
+            let response = '';
+            
+            // Check if the command exists
+            if (commands[command]) {
+                response = commands[command];
+
+                // Clear the terminal if 'clear' is entered
+                if (command === 'clear') {
+                    terminalContent.innerHTML = '';
+                    return;
+                }
+
+                // Close the terminal if 'exit' is entered
+                if (command === 'exit') {
+                    terminal.style.display = 'none';
+                    return;
+                }
+
+            } else {
+                // Unknown command
+                response = `Unknown command: ${command}`;
+            }
+
+            // Append the new command and response to the terminal
+            appendToTerminal(`$ ${command}`);
+            appendToTerminal(response);
+        }
+
+        // Function to append new content to the terminal
+        function appendToTerminal(text) {
+            const newLine = document.createElement('p');
+            newLine.classList.add('command-line');
+            newLine.textContent = text;
+            terminalContent.appendChild(newLine);
+            terminalContent.scrollTop = terminalContent.scrollHeight; // Scroll to bottom
+        }
+
+        // Handle Enter key press to display terminal on 'cmd'
+        document.getElementById('command').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const inputValue = event.target.value.toLowerCase();
+                
+                if (inputValue === 'cmd') {
+                    // Show the terminal
+                    terminal.style.display = 'block';
+                    appendToTerminal('$ Welcome to the hacker terminal.');
+                    event.target.value = ''; // Clear input field
+                }
+            }
+        });
+
+        // Handle terminal input and execute commands
+        document.addEventListener('keydown', function(event) {
+            if (terminal.style.display === 'block') {
+                // Capture command input inside the terminal
+                if (event.key === 'Enter') {
+                    const command = terminalInput.textContent.trim();
+                    if (command) {
+                        processCommand(command);
+                        terminalInput.textContent = ''; // Clear the input line
+                    }
+                } else if (event.key === 'Backspace') {
+                    terminalInput.textContent = terminalInput.textContent.slice(0, -1); // Handle backspace
+                } else if (event.key.length === 1) {
+                    terminalInput.textContent += event.key; // Append characters to terminal input
+                }
+            }
+        });
+
+        // Make the terminal draggable
+        const header = document.querySelector(".terminal-header");
+        let isDragging = false;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        header.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            offsetX = e.clientX - terminal.offsetLeft;
+            offsetY = e.clientY - terminal.offsetTop;
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                terminal.style.left = (e.clientX - offsetX) + 'px';
+                terminal.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+         function showAlert() {
+            const alertMessage = document.getElementById('alertMessage');
+            const overlay = document.getElementById('overlay');
+            const customAlert = document.getElementById('customAlert');
+
+            alertMessage.innerText = "WELCOME TO MY PAGE STILL UNDER CONSTARUCTION ⚠️";
+            
+            overlay.style.display = 'block'; // Show overlay
+            customAlert.style.display = 'block'; // Show custom alert
+        }
+
+        function closeAlert() {
+            const overlay = document.getElementById('overlay');
+            const customAlert = document.getElementById('customAlert');
+
+            overlay.style.display = 'none'; // Hide overlay
+            customAlert.style.display = 'none'; // Hide custom alert
+        }
+
+        // Automatically show the alert when the page loads
+        window.onload = showAlert;
 </script>
 </body>
 
